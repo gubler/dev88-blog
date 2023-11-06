@@ -1,31 +1,75 @@
-theme = "black-and-light"
+theme = "anatole"
 relativeURLs = true
-baseURL = "/"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
-paginate = 3
+baseURL = "https://dev88.co"
+title = "Thinking Ape"
+author = "Daryl Gubler"
+copyright = "Copyright ©2023, Daryl Gubler"
+paginate = 10
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+[params]
+title = "Thinking Ape"
+author = "Daryl Gubler"
+description = "Occasional Code and Writings"
+profilePicture = "images/brain_ape.png"
+contentratio = 0.7
+readMore = true
+postSectionName = "posts"
+customCss = ["css/custom.css", "css/syntax.css"]
+keywords = ""
+favicon = "favicons/"
+customJs = []
+mainSections = ["post"]
+images = ["images/site-feature-image.png"]
+doNotLoadAnimations = false
+singleDateFormat = "2006-01-02"
+indexDateFormat = "2006-01-02"
+listDateFormat = "2006-01-02"
+[[socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/gubler"
+
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+        unsafe=true
 
 [menu]
-
   [[menu.main]]
     identifier = "home"
     name = "Home"
     url = "/"
     weight = 1
+ # [[menu.main]]
+  #   identifier = "posts"
+  #   name = "Posts"
+  #   weight = 2
+  #   url = "/post/"
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 10
+    weight = 3
+  [[menu.main]]
+    identifier = "uses"
+    name = "Uses"
+    url = "/uses/"
+    weight = 4
 
 [taxonomies]
 category = "categories"
-tag = "tags"
 series = "series"
+tag = "tags"
 
 [privacy]
 
